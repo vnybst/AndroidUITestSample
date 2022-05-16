@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'registry.amarulasolutions.com:443/bitrise-android' }
+        docker { image 'registry.amarulasolutions.com:443/bitrise-android:latest' }
     }
     stages {
         stage('Build') {
