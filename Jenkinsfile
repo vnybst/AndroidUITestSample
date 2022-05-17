@@ -8,7 +8,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh '/Users/vinaybisht/emulator.sh'
                 sh './gradlew connectedAndroidTest'
             }
         }
