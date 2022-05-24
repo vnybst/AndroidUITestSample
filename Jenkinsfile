@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
         image 'android-container:sunflower'
-        args '-u jenkins'
+        args '-u root'
         }
     }
     stages {
