@@ -1,7 +1,8 @@
 pipeline {
     agent {
         docker{
-            'android-container:sunflower'
+            image 'android-container:sunflower'
+            args '-u root'
         }
     }
     stages {
