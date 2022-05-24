@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                sh 'chmod +x start.sh'
-                ./start.sh
+               sh '/start.sh'
                 sh './gradlew connectedAndroidTest'
             }
         }
