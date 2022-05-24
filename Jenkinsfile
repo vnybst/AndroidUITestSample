@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh '. /start.sh'
+                bash '. /start.sh'
                 sh './gradlew connectedAndroidTest'
             }
         }
