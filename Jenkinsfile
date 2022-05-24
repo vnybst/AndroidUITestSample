@@ -1,8 +1,6 @@
 pipeline {
     agent {
-        docker {
-        image 'android-container:sunflower'
-        args '-u root'
+        docker.image( 'android-container:sunflower').withRun('-u root').inside{
         sh 'chmod +x ./start.sh'
         sh './start.sh'
         }
