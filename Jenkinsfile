@@ -3,12 +3,12 @@ pipeline {
         docker{
             image 'android-container:sunflower'
             args '-u root'
+            sh './start.sh'
         }
     }
     stages {
         stage('Build') {
             steps {
-                sh './start.sh'
                 sh './gradlew connectedAndroidTest'
             }
         }
